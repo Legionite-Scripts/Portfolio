@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar for Webkit */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #030712; /* Deep background */
+}
+::-webkit-scrollbar-thumb {
+  background: #06b6d4; /* Cyan accent */
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0ea5e9;
+}
+
+/* ... other custom styles ... */
+
+body {
+  background-color: #030712; /* Deep background */
+  color: #f8fafc;
+}
+
+::selection {
+  background-color: #06b6d4; /* Cyan selection */
+  color: #030712;
+}
