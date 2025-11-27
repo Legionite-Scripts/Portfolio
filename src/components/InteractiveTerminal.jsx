@@ -280,7 +280,7 @@ phone: () => {
 },
 
 resume: () => {
-  const fileId = '1zFOtnzufKmG_DR33wF0FruqlNfxGiIU-';
+  const fileId = '1DB3iXrGctwJh1W7BRxvH-p0x34xjz7MmYhrtKQnOe50';
   
   const viewUrl = `https://drive.google.com/file/d/${fileId}/view`;
   const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
