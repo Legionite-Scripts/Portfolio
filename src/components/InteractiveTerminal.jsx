@@ -167,7 +167,7 @@ export const InteractiveTerminal = () => {
       '  📱 Phone:    +234 904 368 3675',
       '  📍 Location: Lagos, Nigeria',
       '  🐙 GitHub:   github.com/legionite',
-      '  💼 LinkedIn: linkedin.com/in/legionite',
+      '  💼 LinkedIn: https://www.linkedin.com/in/samuel-onwuka-825205263/',
       '',
       '💡 Tip: Use "email" or "phone" commands for quick access',
       '',
@@ -225,7 +225,7 @@ export const InteractiveTerminal = () => {
     },
 
     linkedin: () => {
-      window.open('https://linkedin.com/in/yourusername', '_blank');
+      window.open('https://www.linkedin.com/in/samuel-onwuka-825205263/', '_blank');
       return ['', '🔗 Opening LinkedIn profile in new tab...', ''];
     },
 

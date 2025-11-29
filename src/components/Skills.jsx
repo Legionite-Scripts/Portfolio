@@ -86,7 +86,11 @@ export const Skills = () => {
       <div className="container mx-auto px-6">
         <Reveal>
           <div className="text-center mb-16">
-            <h2 className="font-marker text-4xl md:text-5xl mb-4">My <span className="text-primary">Skills</span></h2>
+            <h2 className="font-marker text-4xl md:text-5xl mb-4">My <span className="text-primary relative">Skills
+                <svg className="absolute -bottom-0 left-0 w-full" height="8" viewBox="0 0 200 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 4C50 4 50 0 100 4C150 8 150 0 200 4" stroke="#10b981" strokeWidth="2" fill="none"/>
+                </svg>
+              </span></h2>
             <p className="text-muted">The technologies I use to bring ideas to life.</p>
           </div>
 

@@ -28,3 +28,6 @@ body {
   background-color: #06b6d4; /* Cyan selection */
   color: #030712;
 }
+img{
+  -webkit-user-drag: none;
+}
