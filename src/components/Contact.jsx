@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { Reveal } from './Reveal';
 import { GithubIcon, TwitterIcon, LinkedinIcon, MailIcon } from './Icons';
 
@@ -23,11 +24,37 @@ export const Contact = () => {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
-    // Simulate form submission (in production, send to your backend/email service)
+    // Get environment variables
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    // Debug log - Remove this after confirming it works
+    console.log('Environment Check:', {
+      serviceId,
+      templateId,
+      publicKey,
+      allEnvVars: import.meta.env
+    });
+
+    // Check if environment variables are loaded
+    if (!serviceId || !templateId || !publicKey) {
+      console.error('Missing environment variables:', { serviceId, templateId, publicKey });
+      setSubmitStatus('config_error');
+      setIsSubmitting(false);
+      return;
+    }
+
+    // Create the object that matches your EmailJS template variables
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+      to_name: "Samuel",
+    };
+
     try {
-      // Here you would normally send the form data to your backend
-      // For now, we'll just simulate a delay
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
       
       setSubmitStatus('success');
       setFormData({ name: "", email: "", message: "" });
@@ -35,6 +62,7 @@ export const Contact = () => {
       // Reset success message after 5 seconds
       setTimeout(() => setSubmitStatus(null), 5000);
     } catch (error) {
+      console.error('EmailJS Error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -90,7 +118,7 @@ export const Contact = () => {
                   <p className="text-sm opacity-75 mb-3">Connect with me:</p>
                   <div className="flex gap-4">
                     <a 
-                      href="https://github.com/yourusername" 
+                      href="https://github.com/legionite-scripts" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-3 bg-bg/10 rounded-full hover:bg-bg hover:text-primary transition-all hover:scale-110"
@@ -99,7 +127,7 @@ export const Contact = () => {
                       <GithubIcon />
                     </a>
                     <a 
-                      href="https://twitter.com/Legionite" 
+                      href="https://twitter.com/TheLegionite" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-3 bg-bg/10 rounded-full hover:bg-bg hover:text-primary transition-all hover:scale-110"
@@ -108,7 +136,7 @@ export const Contact = () => {
                       <TwitterIcon />
                     </a>
                     <a 
-                      href="https://linkedin.com/in/yourusername" 
+                      href="https://www.linkedin.com/in/samuel-onwuka-825205263/" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-3 bg-bg/10 rounded-full hover:bg-bg hover:text-primary transition-all hover:scale-110"
@@ -173,7 +201,7 @@ export const Contact = () => {
                     ></textarea>
                   </div>
 
-                  {/* Success/Error Messages */}
+                  {/* Status Messages */}
                   {submitStatus === 'success' && (
                     <div className="bg-primary/10 border border-primary text-primary px-4 py-3 rounded flex items-center gap-2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -191,6 +219,17 @@ export const Contact = () => {
                         <line x1="12" y1="16" x2="12.01" y2="16"/>
                       </svg>
                       <span className="text-sm font-semibold">Oops! Something went wrong. Please try again.</span>
+                    </div>
+                  )}
+
+                  {submitStatus === 'config_error' && (
+                    <div className="bg-yellow-500/10 border border-yellow-500 text-yellow-500 px-4 py-3 rounded flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                        <line x1="12" y1="9" x2="12" y2="13"/>
+                        <line x1="12" y1="17" x2="12.01" y2="17"/>
+                      </svg>
+                      <span className="text-sm font-semibold">Configuration Error: Environment variables not loaded. Check your .env file and restart the dev server.</span>
                     </div>
                   )}
                   

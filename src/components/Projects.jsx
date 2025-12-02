@@ -20,28 +20,25 @@ export const Projects = () => {
       image: "https://placehold.co/1200x800/1e293b/10b981?text=Kenna+Partners",
       liveUrl: "https://KENNAPARTNERS.com",
       color: "from-blue-500 to-cyan-500",
-      impact: "Engagement +45%",
-      year: "2024"
+      year: "2025"
     },
     {
       title: "Quilox",
-      desc: "A modern, high-performance website built for Quilox, featuring an immersive UI, smooth animations, and mobile-first responsiveness.",
+      desc: "A modern, high-performance website built for Quilox, featuring an immersive UI, and mobile-first responsiveness.",
       tags: ["React.js", "TailwindCSS", "Performance"],
       image: "https://placehold.co/1200x800/1e293b/10b981?text=Quilox",
       liveUrl: "https://clubquilox.com/",
       color: "from-green-500 to-emerald-500",
-      impact: "Users +60%",
-      year: "2024"
+      year: "2025"
     },
     {
-      title: "Top Universe EdTech",
-      desc: "Multi-application platform serving 13,000+ daily users. Led the migration from legacy code to Nuxt.js, resulting in major SEO improvements.",
+      title: "Tantalizers Eatery",
+      desc: "Official Website for the Tantalizers restaurant chain, built with Vue.js and Nuxt.js, optimized for SEO and performance.",
       tags: ["Vue.js", "Nuxt.js", "SEO"],
-      image: "https://placehold.co/1200x800/1e293b/10b981?text=Top+Universe",
-      liveUrl: "https://topuniverse.org",
+      image: "https://placehold.co/1200x800/1e293b/10b981?text=Tantalizers",
+      liveUrl: "https://tantalizer.netlify.app/",
       color: "from-purple-500 to-pink-500",
-      impact: "13K+ Daily Users",
-      year: "2023"
+      year: "2025"
     },
 
   ];
@@ -179,11 +176,6 @@ export const Projects = () => {
                   </h3>
 
                   <div className="flex items-center gap-4">
-                     <span className="inline-flex items-center gap-2 text-white/90 text-sm md:text-base font-medium bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-primary"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-                        {projects[activeProject].impact}
-                     </span>
-                     <span className="text-white/40">|</span>
                      <span className="text-white/80 text-sm md:text-base">{projects[activeProject].year}</span>
                   </div>
 

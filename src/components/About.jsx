@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 
 const Reveal = ({ children }) => {
   return <div className="animate-fadeIn">{children}</div>;
@@ -23,12 +23,12 @@ export const About = () => {
       bgGradient: "from-blue-400/10 to-blue-600/5"
     },
     { 
-      name: "Nuxt.js", 
-      iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg",
-      borderHover: "hover:border-green-500",
-      textHover: "group-hover:text-green-500",
-      barHover: "group-hover:bg-green-500",
-      bgGradient: "from-green-500/10 to-green-700/5"
+      name: "React Native", 
+      iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      borderHover: "hover:border-sky-400",
+      textHover: "group-hover:text-sky-400",
+      barHover: "group-hover:bg-sky-400",
+      bgGradient: "from-sky-400/10 to-sky-600/5"
     },
     { 
       name: "Vue.js", 
@@ -37,6 +37,22 @@ export const About = () => {
       textHover: "group-hover:text-emerald-400",
       barHover: "group-hover:bg-emerald-400",
       bgGradient: "from-emerald-400/10 to-emerald-600/5"
+    },
+    { 
+      name: "Nuxt.js", 
+      iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg",
+      borderHover: "hover:border-green-500",
+      textHover: "group-hover:text-green-500",
+      barHover: "group-hover:bg-green-500",
+      bgGradient: "from-green-500/10 to-green-700/5"
+    },
+    { 
+      name: "Angular", 
+      iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+      borderHover: "hover:border-red-500",
+      textHover: "group-hover:text-red-500",
+      barHover: "group-hover:bg-red-500",
+      bgGradient: "from-red-500/10 to-red-700/5"
     },
     { 
       name: "TypeScript", 
@@ -54,13 +70,13 @@ export const About = () => {
       barHover: "group-hover:bg-cyan-400",
       bgGradient: "from-cyan-400/10 to-cyan-600/5"
     },
-        { 
+    { 
       name: "Next.js", 
       iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-      borderHover: "hover:border-black",
-      textHover: "group-hover:text-black",
-      barHover: "group-hover:bg-black",
-      bgGradient: "from-black/10 to-cyan-600/5"
+      borderHover: "hover:border-gray-400",
+      textHover: "group-hover:text-gray-400",
+      barHover: "group-hover:bg-gray-400",
+      bgGradient: "from-gray-400/10 to-gray-600/5"
     }
   ];
 
@@ -129,7 +145,10 @@ export const About = () => {
               {/* CTA */}
               <div className="mt-8 md:mt-10">
                 <a 
-                  href="/resume.pdf" 
+                  href="https://docs.google.com/document/d/1DB3iXrGctwJh1W7BRxvH-p0x34xjz7MmYhrtKQnOe50/export?format=pdf" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download="Samuel_Onwuka_Resume.pdf"
                   className="inline-flex items-center justify-center gap-2 bg-emerald-500 text-slate-950 font-bold py-3 px-6 sm:px-8 rounded-full hover:bg-white hover:text-slate-950 transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 hover:scale-105 w-full sm:w-auto text-sm sm:text-base"
                 >
                   <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

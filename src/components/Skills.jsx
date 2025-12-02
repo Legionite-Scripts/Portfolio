@@ -46,6 +46,7 @@ const getSkillIcon = (skillName) => {
     
     // Frontend Icons
     "React.js": <svg xmlns="http://www.w3.org/2000/svg" viewBox="-11.5 -10.23174 23 20.46348" fill="#61DAFB" className="w-5 h-5 animate-[spin_5s_linear_infinite]"><circle cx="0" cy="0" r="2.0" fill="#61DAFB"/><g stroke="#61DAFB" strokeWidth="1" fill="none"><ellipse rx="11" ry="4.2"/><ellipse rx="11" ry="4.2" transform="rotate(60)"/><ellipse rx="11" ry="4.2" transform="rotate(120)"/></g></svg>,
+    "React Native": <svg xmlns="http://www.w3.org/2000/svg" viewBox="-11.5 -10.23174 23 20.46348" fill="#61DAFB" className="w-5 h-5 animate-[spin_5s_linear_infinite]"><circle cx="0" cy="0" r="2.0" fill="#61DAFB"/><g stroke="#61DAFB" strokeWidth="1" fill="none"><ellipse rx="11" ry="4.2"/><ellipse rx="11" ry="4.2" transform="rotate(60)"/><ellipse rx="11" ry="4.2" transform="rotate(120)"/></g></svg>,
     "Next.js": <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-white"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm2.844 7.5L12 13.344 9.156 9.5H7.72L12 16.5l4.28-6.91H14.844z"/></svg>,
     "Redux": <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#764ABC" className="w-5 h-5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM8.5 15.5h2V12h3V8.5h-2V12H8.5V15.5z" /></svg>,
     "Tailwind CSS": <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 48" fill="#38BDF8" className="w-5 h-5"><path d="M12 4c-2.4 0-4.8.6-7 1.8C3.8 6.4 2.3 8.3 1.2 10.6c-1.1 2.3-1.8 4.7-1.2 7 0 0 .5 2.1 2.5 3.5 2 1.4 5.3 1.9 8.2 1.3 2.9-.6 5.8-2.6 7.4-5.3 1.6-2.7 1.9-5.9.8-8.8-1.1-2.9-3.4-5.2-6.4-6.4C10.6 3.9 12 4 12 4zM23 16c-1.6 0-3.2.4-4.6 1.2-1.4.8-2.6 2-3.4 3.4-1.2 2.4-.9 5.3.8 7.4 1.7 2.1 4.5 3.1 7.2 2.8 2.7-.3 5.1-1.9 6.7-4.4 1.6-2.5 1.7-5.5.1-8.1-1.6-2.6-4.3-4.5-7.3-4.6zM34 29c-1.6 0-3.2.4-4.6 1.2-1.4.8-2.6 2-3.4 3.4-1.2 2.4-.9 5.3.8 7.4 1.7 2.1 4.5 3.1 7.2 2.8 2.7-.3 5.1-1.9 6.7-4.4 1.6-2.5 1.7-5.5.1-8.1-1.6-2.6-4.3-4.5-7.3-4.6z" transform="scale(0.7) translate(10, 5)"/></svg>,
@@ -73,7 +74,7 @@ export const Skills = () => {
     },
     {
       title: "Frontend",
-      skills: ["React.js", "Next.js", "Redux", "Tailwind CSS"]
+      skills: ["React.js","React Native", "Next.js", "Redux", "Tailwind CSS"]
     },
     {
       title: "Tools",

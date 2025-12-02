@@ -28,9 +28,9 @@ export const Hero = () => {
           </div>
 
           <div className="mt-12 flex items-center justify-center md:justify-start gap-6 text-muted">
-            <a href="#" className="hover:text-primary transition-colors hover:-translate-y-1 transform duration-300"><GithubIcon /></a>
-            <a href="#" className="hover:text-primary transition-colors hover:-translate-y-1 transform duration-300"><TwitterIcon /></a>
-            <a href="#" className="hover:text-primary transition-colors hover:-translate-y-1 transform duration-300"><LinkedinIcon /></a>
+            <a href="https://github.com/legionite-scripts" className="hover:text-primary transition-colors hover:-translate-y-1 transform duration-300"><GithubIcon /></a>
+            <a href="https://twitter.com/TheLegionite" className="hover:text-primary transition-colors hover:-translate-y-1 transform duration-300"><TwitterIcon /></a>
+            <a href="https://www.linkedin.com/in/samuel-onwuka-825205263/" className="hover:text-primary transition-colors hover:-translate-y-1 transform duration-300"><LinkedinIcon /></a>
           </div>
         </div>
 
@@ -39,7 +39,7 @@ export const Hero = () => {
             <div className="absolute inset-0 border-4 border-primary rounded-full translate-x-4 translate-y-4"></div>
             <div className="absolute inset-0 bg-surface rounded-full overflow-hidden border-4 border-bg">
               <img 
-                src="/dp.jpg" 
+                src="/me.png" 
                 alt="Samuel Onwuka" 
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
               />
