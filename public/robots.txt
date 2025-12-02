@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://samuel-onwuka.vercel.app/sitemap.xml
